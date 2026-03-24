@@ -86,6 +86,8 @@ End
 ```
 
 ---
+## Workflow of the Power Automate
+<img width="786" height="594" alt="image" src="https://github.com/user-attachments/assets/f91389fb-6769-43fc-bb66-570a47fb75f6" />
 
 ## ⚙️ Tech Stack
 
