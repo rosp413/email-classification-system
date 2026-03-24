@@ -1,0 +1,15 @@
+[project]
+name = "email-flow-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.128.5",
+    "langchain>=1.2.9",
+    "langchain-groq>=1.1.2",
+    "uvicorn>=0.40.0",
+    "langgraph>=1.0.8",
+    "pydantic>=2.12.5",
+]

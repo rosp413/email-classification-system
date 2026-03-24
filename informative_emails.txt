@@ -1,0 +1,80 @@
+
+==============================
+CATEGORY : INFORMATIVE
+PRIORITY : LOW | URGENCY : 1
+From     : Roshni.Poojary@idolizesolutions.com
+Subject  : Mail Test
+Received : 2026-02-09T16:44:11+00:00
+
+Email:
+Hojana bhai kya hogaya
+
+Recommended Action:
+No action required
+
+Sentiment:
+neutral
+
+Reason:
+The email content is a casual greeting and does not require any action.
+==============================
+
+==============================
+CATEGORY : INFORMATIVE
+PRIORITY : LOW | URGENCY : 1
+From     : Roshni.Poojary@idolizesolutions.com
+Subject  : Monthly Newsletter – Product Updates
+Received : 2026-02-09T16:52:01+00:00
+
+Email:
+Just an update in the system may check later
+
+Recommended Action:
+No action required
+
+Sentiment:
+neutral
+
+Reason:
+No specific action is required, just FYI
+==============================
+
+==============================
+CATEGORY : INFORMATIVE
+PRIORITY : LOW | URGENCY : 1
+From     : Roshni.Poojary@idolizesolutions.com
+Subject  : testing mail
+Received : 2026-02-11T05:57:24+00:00
+
+Email:
+To check if the mail system is working or not
+
+Recommended Action:
+No action required
+
+Sentiment:
+neutral
+
+Reason:
+This email is a test message and does not require any response.
+==============================
+
+==============================
+CATEGORY : INFORMATIVE
+PRIORITY : LOW | URGENCY : 1
+From     : Roshni.Poojary@idolizesolutions.com
+Subject  : Test Mail
+Received : 2026-02-11T16:12:25+00:00
+
+Email:
+Mail testing with langgraph
+
+Recommended Action:
+No action required
+
+Sentiment:
+neutral
+
+Reason:
+The email is a test mail and does not require any action.
+==============================

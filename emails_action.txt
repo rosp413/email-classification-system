@@ -1,0 +1,44 @@
+
+==================================================
+CATEGORY       : ACTIONABLE
+PRIORITY       : HIGH
+URGENCY SCORE  : 8
+RECEIVED TIME  : 2026-02-11T18:18:43+00:00
+
+FROM           : Roshni.Poojary@idolizesolutions.com
+SUBJECT        : Approval Needed for Budget Allocation
+
+EMAIL BODY:
+Hi,
+
+
+
+We require your approval on the proposed budget allocation for Q2.
+
+
+
+Kindly review the attached document and confirm by tomorrow.
+
+
+
+Thanks,
+
+Finance Team
+
+--------------------------------------------------
+
+
+==================================================
+CATEGORY       : ACTIONABLE
+PRIORITY       : HIGH
+URGENCY SCORE  : 9
+RECEIVED TIME  : 2026-03-24T06:25:24+00:00
+
+FROM           : Roshni.Poojary@idolizesolutions.com
+SUBJECT        : Assignment 
+
+EMAIL BODY:
+You have to submit the task before Thursday it self
+
+--------------------------------------------------
+

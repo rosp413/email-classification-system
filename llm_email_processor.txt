@@ -1,0 +1,150 @@
+import os
+import json
+from langchain_groq import ChatGroq
+from langchain_core.prompts import ChatPromptTemplate
+
+from config import GROQ_API_KEY, MODEL_NAME
+
+# ------------------ PATHS ------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+ACTIONABLE_FILE = os.path.join(BASE_DIR, "actionable_email.txt")
+INFORMATIVE_FILE = os.path.join(BASE_DIR, "informative_emails.txt")
+
+# ------------------ LLM SETUP ------------------
+llm = ChatGroq(
+    groq_api_key=GROQ_API_KEY,
+    model_name=MODEL_NAME,
+    temperature=0.2
+)
+
+# ------------------ STRONG PROMPT ------------------
+prompt = ChatPromptTemplate.from_messages([
+    ("system",
+     """
+You are a professional enterprise email classification engine.
+
+Rules:
+1. category:
+   - actionable → needs reply, approval, task, or decision
+   - informative → FYI, newsletters, promotions, alerts
+
+2. priority:
+   - high, medium, low
+
+3. sentiment:
+   - positive, neutral, negative
+
+4. urgency_score:
+   - integer from 1 to 10
+
+5. recommended_action:
+   - clear next step or 'No action required'
+
+6. reason:
+   - short justification
+
+⚠️ OUTPUT RULES:
+- Respond ONLY with valid JSON
+- No markdown
+- No explanation text
+
+JSON FORMAT:
+{{
+  "category": "actionable | informative",
+  "priority": "high | medium | low",
+  "sentiment": "positive | neutral | negative",
+  "urgency_score": 1-10,
+  "recommended_action": "string",
+  "reason": "string"
+}}
+"""),
+    ("human",
+     """
+From: {sender}
+Subject: {subject}
+
+Email Content:
+{body}
+""")
+])
+
+
+chain = prompt | llm
+
+
+# ------------------ FORMAT FOR FILE ------------------
+def format_email(record: dict) -> str:
+    return f"""
+==============================
+CATEGORY : {record['category'].upper()}
+PRIORITY : {record['priority'].upper()} | URGENCY : {record['urgency_score']}
+From     : {record['from']}
+Subject  : {record['subject']}
+Received : {record['received_time']}
+
+Email:
+{record['body']}
+
+Recommended Action:
+{record['recommended_action']}
+
+Sentiment:
+{record['sentiment']}
+
+Reason:
+{record['reason']}
+==============================
+"""
+
+
+# ------------------ MAIN FUNCTION ------------------
+def process_email(
+    sender: str,
+    subject: str,
+    body: str,
+    received_time: str
+) -> dict:
+    """
+    Called by app.py for each incoming email
+    """
+
+    response = chain.invoke({
+        "sender": sender,
+        "subject": subject,
+        "body": body
+    })
+
+    try:
+        result = json.loads(response.content)
+    except Exception:
+        raise ValueError("LLM returned invalid JSON")
+
+    record = {
+        "from": sender,
+        "subject": subject,
+        "body": body,
+        "received_time": received_time,
+        "category": result.get("category", "informative").lower(),
+        "priority": result.get("priority", "low"),
+        "urgency_score": result.get("urgency_score", 1),
+        "sentiment": result.get("sentiment", "neutral"),
+        "recommended_action": result.get("recommended_action", "No action required"),
+        "reason": result.get("reason", "")
+    }
+
+    target_file = (
+        ACTIONABLE_FILE
+        if record["category"] == "actionable"
+        else INFORMATIVE_FILE
+    )
+
+    # Append to file
+    with open(target_file, "a", encoding="utf-8") as f:
+        f.write(format_email(record))
+
+    return {
+        "category": record["category"],
+        "priority": record["priority"],
+        "urgency_score": record["urgency_score"]
+    }

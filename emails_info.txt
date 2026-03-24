@@ -1,0 +1,30 @@
+
+==================================================
+CATEGORY       : INFORMATIVE
+PRIORITY       : LOW
+URGENCY SCORE  : 1
+RECEIVED TIME  : 2026-03-11T10:37:43+00:00
+
+FROM           : Roshni.Poojary@idolizesolutions.com
+SUBJECT        : Testing the email
+
+EMAIL BODY:
+Hojana bhai
+
+--------------------------------------------------
+
+
+==================================================
+CATEGORY       : INFORMATIVE
+PRIORITY       : LOW
+URGENCY SCORE  : 1
+RECEIVED TIME  : 2026-03-24T06:23:14+00:00
+
+FROM           : Roshni.Poojary@idolizesolutions.com
+SUBJECT        : Mail test
+
+EMAIL BODY:
+Testing
+
+--------------------------------------------------
+

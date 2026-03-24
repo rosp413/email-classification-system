@@ -1,0 +1,68 @@
+
+==============================
+CATEGORY : ACTIONABLE
+PRIORITY : HIGH | URGENCY : 10
+From     : Roshni.Poojary@idolizesolutions.com
+Subject  : Assignment
+Received : 2026-02-09T16:47:31+00:00
+
+Email:
+Dear Team,
+
+
+
+We have detected multiple failed login attempts on the admin panel indicating a potential security breach.
+
+
+
+Immediate action is required to investigate the issue, reset affected credentials, and secure the system.
+
+
+
+Please treat this as a
+
+Recommended Action:
+Investigate the security breach, reset affected credentials, and secure the system immediately.
+
+Sentiment:
+negative
+
+Reason:
+Potential security breach detected on the admin panel.
+==============================
+
+==============================
+CATEGORY : ACTIONABLE
+PRIORITY : HIGH | URGENCY : 8
+From     : Roshni.Poojary@idolizesolutions.com
+Subject  : Follow-up Required: Client Feedback on Proposal
+Received : 2026-02-09T16:50:12+00:00
+
+Email:
+Hi,
+
+
+
+We received feedback from the client on the proposal shared last week.
+
+Some clarifications are required before we can move forward.
+
+
+
+Please review the comments and respond by tomorrow.
+
+
+
+Thanks,
+
+Sales Team
+
+Recommended Action:
+Review client feedback and respond by tomorrow
+
+Sentiment:
+neutral
+
+Reason:
+Client feedback is required before moving forward
+==============================
